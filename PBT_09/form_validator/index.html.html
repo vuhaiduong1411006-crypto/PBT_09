@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Đăng ký tài khoản</h1>
+
+      <form id="registerForm" novalidate>
+        <!-- Họ tên -->
+        <div class="field">
+          <label for="name">Họ và tên</label>
+          <div class="input-wrap">
+            <input type="text" id="name" placeholder="Nhập họ và tên" />
+            <span class="icon" id="nameIcon"></span>
+          </div>
+          <p class="error" id="nameError"></p>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <input type="text" id="email" placeholder="example@email.com" />
+            <span class="icon" id="emailIcon"></span>
+          </div>
+          <p class="error" id="emailError"></p>
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+          <label for="password">Mật khẩu</label>
+          <div class="input-wrap">
+            <input type="password" id="password" placeholder="Nhập mật khẩu" />
+            <span class="icon" id="passwordIcon"></span>
+          </div>
+          <div class="strength-bar">
+            <div class="strength-fill" id="strengthFill"></div>
+          </div>
+          <p class="strength-label" id="strengthLabel"></p>
+          <p class="error" id="passwordError"></p>
+        </div>
+
+        <!-- Confirm password -->
+        <div class="field">
+          <label for="confirm">Nhập lại mật khẩu</label>
+          <div class="input-wrap">
+            <input type="password" id="confirm" placeholder="Nhập lại mật khẩu" />
+            <span class="icon" id="confirmIcon"></span>
+          </div>
+          <p class="error" id="confirmError"></p>
+        </div>
+
+        <!-- Phone -->
+        <div class="field">
+          <label for="phone">Số điện thoại</label>
+          <div class="input-wrap">
+            <input type="text" id="phone" placeholder="0901-234-567" maxlength="12" />
+            <span class="icon" id="phoneIcon"></span>
+          </div>
+          <p class="error" id="phoneError"></p>
+        </div>
+
+        <button type="submit" id="submitBtn" disabled>Đăng ký</button>
+      </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay hidden" id="modalOverlay">
+      <div class="modal">
+        <h2>🎉 Đăng ký thành công!</h2>
+        <div id="modalInfo"></div>
+        <button id="modalClose">Đóng</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
